@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ルビの隠し方の比較</title>
+<style>
+table {
+  font-size: 2rem;
+}
+
+.visibility-collapse .kanji-primary {
+  visibility: collapse;
+}
+
+.visibility-hidden .kanji-primary {
+  visibility: hidden;
+}
+
+.display-none .kanji-primary {
+  display: none;
+}
+
+th {
+  padding: 0.25em 0.5em 0.25em 0.25em;
+}
+
+td {
+  padding: 0.25em 0.25em 0.25em 0.5em;
+}
+
+th {
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tbody>
+    <tr>
+      <th><code>visible</code></th>
+      <td><ruby class="default">記<rp>（</rp><rt class="kanji-primary">き</rt><rp>）</rp>入<rp>（</rp><rt class="kanji-primary">にゅう</rt><rp>）</rp>欄<rp>（</rp><rt>らん</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr>
+      <th><code>visibility: collapse</code></th>
+      <td><ruby class="visibility-collapse">記<rp>（</rp><rt class="kanji-primary">き</rt><rp>）</rp>入<rp>（</rp><rt class="kanji-primary">にゅう</rt><rp>）</rp>欄<rp>（</rp><rt>らん</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr>
+      <th><code>visibility: hidden</code></th>
+      <td><ruby class="visibility-hidden">記<rp>（</rp><rt class="kanji-primary">き</rt><rp>）</rp>入<rp>（</rp><rt class="kanji-primary">にゅう</rt><rp>）</rp>欄<rp>（</rp><rt>らん</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr>
+      <th><code>display: none</code></th>
+      <td><ruby class="display-none">記<rp>（</rp><rt class="kanji-primary">き</rt><rp>）</rp>入<rp>（</rp><rt class="kanji-primary">にゅう</rt><rp>）</rp>欄<rp>（</rp><rt>らん</rt><rp>）</rp></ruby></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
