@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>displayプロパティでルビを再現</title>
+<style>
+p {
+  font-size: 2rem;
+}
+
+.ruby {
+  display: ruby;
+}
+
+.rp {
+  display: none;
+}
+
+.rt {
+  display: ruby-text;
+}
+</style>
+</head>
+<body>
+
+<p>
+  <span class="ruby">春夏秋冬<span class="rp">（</span><span class="rt">しゅんかしゅうとう</span><span class="rp">）</span></span>
+</p>
+
+</body>
+</html>
