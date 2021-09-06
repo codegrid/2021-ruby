@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ruby-positionプロパティのoverとunder</title>
+<style>
+p {
+  font-size: 2rem;
+}
+
+.under {
+  -webkit-ruby-position: after;
+  ruby-position: under;
+}
+
+.under ruby {
+  -webkit-ruby-position: before;
+  ruby-position: over;
+}
+</style>
+</head>
+<body>
+
+<p>
+  鬼門は<ruby>北東<rp>（</rp><rt>ほくとう</rt><rp>）</rp><rtc><rp>（</rp><rt>うしとら</rt><rp>）</rp></rtc></ruby>の方角です。
+</p>
+
+<p>
+  鬼門は<ruby class="under"><ruby>北東<rp>（</rp><rt>ほくとう</rt><rp>）</rp></ruby><rp>（</rp><rt>うしとら</rt><rp>）</rp></ruby>の方角です。
+</p>
+
+</body>
+</html>

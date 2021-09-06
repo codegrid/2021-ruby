@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ruby-alignプロパティ値の違い</title>
+<style>
+table {
+  font-size: 2rem;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 0.25em;
+}
+
+.start {
+  ruby-align: left;
+  ruby-align: start;
+}
+
+.center {
+  ruby-align: center;
+}
+
+.space-between {
+  ruby-align: distribute-letter;
+  ruby-align: space-between;
+}
+
+.space-around {
+  ruby-align: distribute-space;
+  ruby-align: space-around;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tbody>
+    <tr class="start">
+      <th><code>start</code></th>
+      <td><ruby>旧領<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby></td>
+      <td><ruby>香具師<rp>（</rp><rt>やし</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr class="center">
+      <th><code>center</code></th>
+      <td><ruby>旧領<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby></td>
+      <td><ruby>香具師<rp>（</rp><rt>やし</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr class="space-between">
+      <th><code>space-between</code></th>
+      <td><ruby>旧領<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby></td>
+      <td><ruby>香具師<rp>（</rp><rt>やし</rt><rp>）</rp></ruby></td>
+    </tr>
+    <tr class="space-around">
+      <th><code>space-around</code></th>
+      <td><ruby>旧領<rp>（</rp><rt>きゅうりょう</rt><rp>）</rp></ruby></td>
+      <td><ruby>香具師<rp>（</rp><rt>やし</rt><rp>）</rp></ruby></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
