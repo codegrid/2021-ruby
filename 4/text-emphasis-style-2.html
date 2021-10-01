@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>text-emphasis-styleプロパティに文字列を指定</title>
+<style>
+table {
+  font-size: 1.8rem;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 0.25em;
+}
+
+em {
+  font-style: normal;
+}
+
+.a {
+  -webkit-text-emphasis-style: "★";
+  text-emphasis-style: "★";
+}
+
+.b {
+  -webkit-text-emphasis-style: "☆★";
+  text-emphasis-style: "☆★";
+}
+
+.c {
+  -webkit-text-emphasis-style: "👨‍👩‍👧‍👦";
+  text-emphasis-style: "👨‍👩‍👧‍👦";
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tbody>
+    <tr>
+      <th><code>"★"</code></th>
+      <td>これが<em class="a">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>"☆★"</code></th>
+      <td>これが<em class="b">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>"👨‍👩‍👧‍👦"</code></th>
+      <td>これが<em class="c">圏点</em>です。</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

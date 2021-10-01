@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>text-emphasis-styleプロパティ値の違い</title>
+<style>
+table {
+  font-size: 1.8rem;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 0.25em;
+}
+
+em {
+  font-style: normal;
+}
+
+button {
+  writing-mode: inherit;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+.fill-dot {
+  -webkit-text-emphasis-style: filled dot;
+  text-emphasis-style: filled dot;
+}
+
+.open-dot {
+  -webkit-text-emphasis-style: open dot;
+  text-emphasis-style: open dot;
+}
+
+.filled-circle {
+  -webkit-text-emphasis-style: filled circle;
+  text-emphasis-style: filled circle;
+}
+
+.open-circle {
+  -webkit-text-emphasis-style: open circle;
+  text-emphasis-style: open circle;
+}
+
+.filled-double-circle {
+  -webkit-text-emphasis-style: filled double-circle;
+  text-emphasis-style: filled double-circle;
+}
+
+.open-double-circle {
+  -webkit-text-emphasis-style: open double-circle;
+  text-emphasis-style: open double-circle;
+}
+
+.filled-triangle {
+  -webkit-text-emphasis-style: filled triangle;
+  text-emphasis-style: filled triangle;
+}
+
+.open-triangle {
+  -webkit-text-emphasis-style: open triangle;
+  text-emphasis-style: open triangle;
+}
+
+.filled-sesame {
+  -webkit-text-emphasis-style: filled sesame;
+  text-emphasis-style: filled sesame;
+}
+
+.open-sesame {
+  -webkit-text-emphasis-style: open sesame;
+  text-emphasis-style: open sesame;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <th style="text-align: center"><code>filled</code></th>
+      <th style="text-align: center"><code>open</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>dot</code></th>
+      <td>これが<em class="fill-dot">圏点</em>です。</td>
+      <td>これが<em class="open-dot">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>circle</code></th>
+      <td>これが<em class="filled-circle">圏点</em>です。</td>
+      <td>これが<em class="open-circle">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>double-circle</code></th>
+      <td>これが<em class="filled-double-circle">圏点</em>です。</td>
+      <td>これが<em class="open-double-circle">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>triangle</code></th>
+      <td>これが<em class="filled-triangle">圏点</em>です。</td>
+      <td>これが<em class="open-triangle">圏点</em>です。</td>
+    </tr>
+    <tr>
+      <th><code>sesame</code></th>
+      <td>これが<em class="filled-sesame">圏点</em>です。</td>
+      <td>これが<em class="open-sesame">圏点</em>です。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <button type="button" id="button">横書きと縦書きを変更する</button>
+</p>
+
+
+<script>
+const button = document.querySelector('#button');
+button.addEventListener('click', onButtonClick);
+
+function onButtonClick(event) {
+  event.preventDefault();
+  document.body.classList.toggle('vertical');
+}
+</script>
+
+</body>
+</html>

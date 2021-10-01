@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>text-emphasis-colorプロパティの利用</title>
+<style>
+p {
+  font-size: 1.8rem;
+}
+
+body {
+  color: black;
+}
+
+em {
+  font-style: normal; /* デフォルト指定をリセット */
+}
+
+.em1 {
+  -webkit-text-emphasis-style: circle;
+  text-emphasis-style: circle;
+  -webkit-text-emphasis-color: tomato;
+  text-emphasis-color: tomato;
+}
+
+.em2 {
+  -webkit-text-emphasis-style: "★";
+  text-emphasis-style: "★";
+  -webkit-text-emphasis-color: deepskyblue;
+  text-emphasis-color: deepskyblue;
+}
+</style>
+</head>
+<body>
+
+<p>
+  これが<em class="em1">圏点</em>です。
+</p>
+
+<p>
+  これが<em class="em2">圏点</em>です。
+</p>
+
+</body>
+</html>

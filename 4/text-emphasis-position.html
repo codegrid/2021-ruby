@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>text-emphasis-positionプロパティの利用</title>
+<style>
+.vertical {
+  writing-mode: vertical-rl;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+em {
+  font-style: normal; /* デフォルト指定をリセット */
+}
+
+em {
+  font-style: normal; /* デフォルト指定をリセット */
+}
+
+.em1 {
+  -webkit-text-emphasis: dot;
+  text-emphasis: dot;
+  -webkit-text-emphasis-position: over right; /* 初期値 */
+  text-emphasis-position: over right; /* 初期値 */
+}
+
+.em2 {
+  -webkit-text-emphasis: dot;
+  text-emphasis: dot;
+  -webkit-text-emphasis-position: under left;
+  text-emphasis-position: under left;
+}
+</style>
+</head>
+<body>
+
+<p>
+  これが<em class="em1">圏点</em>です。
+</p>
+
+<p>
+  これが<em class="em2">圏点</em>です。
+</p>
+
+<p>
+  <button type="button" id="button">横書きと縦書きを変更する</button>
+</p>
+
+<script>
+const button = document.querySelector('#button');
+button.addEventListener('click', onButtonClick);
+
+function onButtonClick(event) {
+  event.preventDefault();
+  document.body.classList.toggle('vertical');
+}
+</script>
+
+</body>
+</html>
